@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        //javaScript가 아닌 babel로 type 지정.
+        
+    const TodoList = ()=>{
+        return(<>
+            <h2>TodoList</h2>
+            <p><input type="text" /><button>저장</button></p> 
+        </>);
+    }
+
+        //새로운 컴포넌트 선언 - HTML 태그처럼 사용
+        function Hello(){
+            return (<>
+                <h1>Hello React Project</h1>
+                <TodoList/>
+            </>);
+        }
+
+        const contaier = document.getElementById('root');
+        const root = ReactDOM.createRoot(contaier);
+        //XML은 부모(root) 엘리먼트가 하나만 있어야 한다. 
+        //부모 엘리먼트 안에 여러 자식을 넣을 수p있다.
+        //root.render( Hello() );
+         root.render(<Hello/>); //위와 동일하다.
+
+    </script>
+</body>
+</html>
