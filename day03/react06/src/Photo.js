@@ -1,5 +1,6 @@
 const Photo = ({item})=>{
-    return (<div className="w3-row w3-margin">
+    return (
+    <div className="w3-row w3-margin">
         <div className="w3-third">
         <img src={item.img} style={{width:"100%",minHeight:"200px"}}/>
         </div>
