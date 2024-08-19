@@ -3,7 +3,7 @@ import Heading from "../components/Heading";
 
 export default () =>{
     return (<div>
-        <Heading />        
+        <Heading />
         <Outlet />
     </div>);
 }
